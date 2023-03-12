@@ -17,9 +17,9 @@ namespace ConsoleApp6
         /// </summary>
         public void DisplayData()
         {
-            for (int i = 0; i < imageName.Length; i++) 
+            for (int i = 0; i < imageName.Length; i++)  //Loops for the length of the array.
             {
-                Console.WriteLine($"{imageName[i]}: {imageSize[i]}kb");
+                Console.WriteLine($"{imageName[i]}: {imageSize[i]}kb"); //prints the imageName and imageSize to the console.
             }
         }
 
@@ -29,13 +29,15 @@ namespace ConsoleApp6
         /// <returns></returns>
         public int TotalDataSize()
         {
-            int total = 0;
-            foreach (int i in imageSize) 
+            int total = 0; //Declares the total variable and initializes it to 0.
+
+            foreach (int i in imageSize) //Uses a foreach loop to itterate through each integer "i" in the imageSize array.
             { 
-                total = total + i;
+                total = total + i; //Adds each value of "i" to the total variable.
             }
-            int totalSize = total;
-            return totalSize;
+            int totalSize = total; //Declares a new variable called totalSize and initlize's it to total.
+
+            return totalSize; //Returns the totalSize.
         }
 
         /// <summary>
@@ -44,15 +46,15 @@ namespace ConsoleApp6
         /// <returns></returns>
         public double AverageDataSize()
         {
-            int total = 0;
+            int total = 0; //Declares the total variable and initializes it to 0.
 
-            foreach (int i in imageSize)
+            foreach (int i in imageSize) //Uses a foreach loop to itterate through each integer "i" in the imageSize array.
             {
-                total = total + i;
+                total = total + i; //Adds each value of "i" to the total variable.
             }
-            double average = total / imageSize.Length;
+            double average = total / imageSize.Length; //Declares a new variable, average, and initializes it as total divided by the length of the array.
 
-            return average;
+            return average; //Returns the average variable.
         }
 
         /// <summary>
@@ -61,18 +63,18 @@ namespace ConsoleApp6
         /// <returns></returns>
         public int CountMinSize() 
         {
-            int count = 0;
+            int count = 0; //Declares the count variable and initializes it to 0.
 
-            foreach (var i in imageSize)
+            foreach (var i in imageSize) //Uses a foreach loop to itterate through each integer "i" in the imageSize array.
             {
-                if (i < 100)
+                if (i < 100) //checks if "i" in imageSize is less than 100.
                 {
-                    count++;
+                    count++; //if "i" is less than 100, this adds 1 to count.
                 }
             }
-            int totalCount = count;
+            int totalCount = count; //Declares a new variable, totalCount, and initializes it as count.
 
-            return totalCount;
+            return totalCount;  //Returns the totalCount Variable.
         }
 
         /// <summary>
@@ -81,15 +83,15 @@ namespace ConsoleApp6
         /// <returns></returns>
         public int LargestImage()
         {
-            int maxValue = imageSize[0];
+            int maxValue = imageSize[0]; //Declares a new variable, maxValue, and initializes it to the first index of imageSize,
 
-            foreach (int item in imageSize)
+            foreach (int i in imageSize) //Uses a foreach loop to itterate through each integer "i" in the imageSize array.
             {
-                if (item > maxValue)
-                    maxValue = item;
+                if (i > maxValue) //Checks if each "i" is greater then the current value of maxValue.
+                    maxValue = i; //Updates maxValue if "i" is greater than the previous maxValue.
             }
 
-            return maxValue;
+            return maxValue; //Returns the maxValue variable as the largest integer in imageSize.
         }
     }
 }
