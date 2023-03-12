@@ -13,18 +13,18 @@ namespace ConsoleApp6
         
 
         /// <summary>
-        /// This code uses a for loop to run through arry for the length of the array and prints the imageName and imageSize to the user.
+        /// This method uses a for loop to run through array for the length of the array and prints the imageName and imageSize to the user.
         /// </summary>
         public void DisplayData()
         {
-            for (int i = 0; i < imageName.Length; i++)
+            for (int i = 0; i < imageName.Length; i++) 
             {
                 Console.WriteLine($"{imageName[i]}: {imageSize[i]}kb");
             }
         }
 
         /// <summary>
-        /// This code returns the total of all int's stored within the imageSize array.
+        /// This method returns the total of all int's stored within the imageSize array.
         /// </summary>
         /// <returns></returns>
         public int TotalDataSize()
@@ -39,7 +39,7 @@ namespace ConsoleApp6
         }
 
         /// <summary>
-        /// this code returns the the total of all ints divided by the length of the array for the average int.
+        /// this Method returns the the total of all ints in imageSize divided by the length of the array for the average int.
         /// </summary>
         /// <returns></returns>
         public double AverageDataSize()
@@ -56,7 +56,7 @@ namespace ConsoleApp6
         }
 
         /// <summary>
-        /// This code runs through the imageSize array and compares each item, if the item is less than 100, the total count increases by 1. 
+        /// This method runs through the imageSize array and compares each item, if the item is less than 100, the total count increases by 1. 
         /// </summary>
         /// <returns></returns>
         public int CountMinSize() 
@@ -76,36 +76,7 @@ namespace ConsoleApp6
         }
 
         /// <summary>
-        /// this code runs through the imageSize array and returns the largest int held in the array.
-        /// both arrays were used to create a tuple by running through the arrays for their length.
-        /// Tuple was used to return both imageName and ImageSize for the largest image.
-        /// i deemed this unnescesary.
-        /// </summary>
-        /// <returns></returns>
-        /* public Tuple<string, int> LargestImage()
-         {
-             Tuple<string, int>[] imageInfo = new Tuple<string, int>[imageName.Length];
-
-             for (int i = 0; i < imageName.Length; i++)
-             {
-                 imageInfo[i] = Tuple.Create(imageName[i], imageSize[i]);
-             }
-
-             var maxValue = imageInfo[0];
-             foreach (var i in imageInfo) 
-             { 
-                 if (i.Item2 > maxValue.Item2)
-                 {
-                     maxValue = i;
-                 }
-
-             }
-
-             return maxValue;
-         }*/
-
-        /// <summary>
-        /// this code runs through the imageSize array and returns the largest int held in the array.
+        /// this method runs through the imageSize array and returns the largest int held in the array.
         /// </summary>
         /// <returns></returns>
         public int LargestImage()
